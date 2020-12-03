@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092EE2C32578444300A0AB36 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EE2C22578444300A0AB36 /* Colors.swift */; };
 		0971C02C25770631001E623A /* Play_SongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02B25770631001E623A /* Play_SongApp.swift */; };
 		0971C02E25770631001E623A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02D25770631001E623A /* ContentView.swift */; };
 		0971C03025770633001E623A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971C02F25770633001E623A /* Assets.xcassets */; };
 		0971C03325770633001E623A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971C03225770633001E623A /* Preview Assets.xcassets */; };
 		0971C03E25770633001E623A /* Play_SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C03D25770633001E623A /* Play_SongTests.swift */; };
 		0971C04925770633001E623A /* Play_SongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C04825770633001E623A /* Play_SongUITests.swift */; };
+		0971C064257709CC001E623A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C063257709CC001E623A /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0971C02825770631001E623A /* Play Song.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Song.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971C02B25770631001E623A /* Play_SongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongApp.swift; sourceTree = "<group>"; };
 		0971C02D25770631001E623A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		0971C04425770633001E623A /* Play SongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Play SongUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971C04825770633001E623A /* Play_SongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongUITests.swift; sourceTree = "<group>"; };
 		0971C04A25770633001E623A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0971C063257709CC001E623A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		0971C05B25770659001E623A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0971C063257709CC001E623A /* RoundedButton.swift */,
+				092EE2C22578444300A0AB36 /* Colors.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0971C02E25770631001E623A /* ContentView.swift in Sources */,
+				092EE2C32578444300A0AB36 /* Colors.swift in Sources */,
+				0971C064257709CC001E623A /* RoundedButton.swift in Sources */,
 				0971C02C25770631001E623A /* Play_SongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
