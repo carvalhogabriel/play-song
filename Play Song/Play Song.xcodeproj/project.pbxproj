@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		092EE2C32578444300A0AB36 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EE2C22578444300A0AB36 /* Colors.swift */; };
+		09509B3025892D6F00BB15A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */; };
+		09509B3625894ED600BB15A5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3525894ED600BB15A5 /* FirebaseAuth */; };
+		09509B3825894ED600BB15A5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3725894ED600BB15A5 /* FirebaseFirestore */; };
+		09509B3A25894ED600BB15A5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3925894ED600BB15A5 /* FirebaseAnalytics */; };
 		0971C02C25770631001E623A /* Play_SongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02B25770631001E623A /* Play_SongApp.swift */; };
 		0971C02E25770631001E623A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02D25770631001E623A /* ContentView.swift */; };
 		0971C03025770633001E623A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971C02F25770633001E623A /* Assets.xcassets */; };
@@ -36,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0971C02825770631001E623A /* Play Song.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Song.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971C02B25770631001E623A /* Play_SongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongApp.swift; sourceTree = "<group>"; };
 		0971C02D25770631001E623A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09509B3625894ED600BB15A5 /* FirebaseAuth in Frameworks */,
+				09509B3825894ED600BB15A5 /* FirebaseFirestore in Frameworks */,
+				09509B3A25894ED600BB15A5 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +113,7 @@
 				0971C05A25770656001E623A /* Models */,
 				0971C02F25770633001E623A /* Assets.xcassets */,
 				0971C03425770633001E623A /* Info.plist */,
+				09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */,
 				0971C03125770633001E623A /* Preview Content */,
 			);
 			path = "Play Song";
@@ -184,6 +193,11 @@
 			dependencies = (
 			);
 			name = "Play Song";
+			packageProductDependencies = (
+				09509B3525894ED600BB15A5 /* FirebaseAuth */,
+				09509B3725894ED600BB15A5 /* FirebaseFirestore */,
+				09509B3925894ED600BB15A5 /* FirebaseAnalytics */,
+			);
 			productName = "Play Song";
 			productReference = 0971C02825770631001E623A /* Play Song.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +269,9 @@
 				Base,
 			);
 			mainGroup = 0971C01F25770631001E623A;
+			packageReferences = (
+				09509B3425894ED600BB15A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0971C02925770631001E623A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +290,7 @@
 			files = (
 				0971C03325770633001E623A /* Preview Assets.xcassets in Resources */,
 				0971C03025770633001E623A /* Assets.xcassets in Resources */,
+				09509B3025892D6F00BB15A5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +409,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -445,6 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -620,6 +640,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09509B3425894ED600BB15A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09509B3525894ED600BB15A5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09509B3425894ED600BB15A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		09509B3725894ED600BB15A5 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09509B3425894ED600BB15A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		09509B3925894ED600BB15A5 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09509B3425894ED600BB15A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0971C02025770631001E623A /* Project object */;
 }

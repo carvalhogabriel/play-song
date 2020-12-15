@@ -6,11 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
+
     var body: some View {
-        RoundedButton(title: "Meu titulo") {
-            print("RoundedButton Tapped")
+        VStack{
+            RoundedButton(title: "Cadastrar") {
+                Auth.auth().createUser(withEmail: "gabrielcarvalho2905@gmail.com",
+                                       password: "Password#123") { authResult, error in
+                    print(authResult ?? "")
+                    print(error ?? "")
+                }
+            }
+            RoundedButton(title: "Logar") {
+                Auth.auth().signIn(withEmail: "gabrielcarvalho2905@gmail.com", password: "Password#123") { (authResult, error) in
+                    print(authResult ?? "")
+                    print(error ?? "")
+                }
+            }
         }
     }
 }

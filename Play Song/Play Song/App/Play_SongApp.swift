@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Play_SongApp: App {
@@ -13,5 +14,9 @@ struct Play_SongApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+
+    init() {
+        FirebaseApp.configure()
     }
 }
