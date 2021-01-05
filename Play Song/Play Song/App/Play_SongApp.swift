@@ -18,5 +18,6 @@ struct Play_SongApp: App {
 
     init() {
         FirebaseApp.configure()
+        let db = Firestore.firestore()
     }
 }
