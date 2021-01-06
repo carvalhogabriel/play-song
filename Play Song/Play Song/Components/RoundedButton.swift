@@ -10,7 +10,7 @@ import SwiftUI
 struct RoundedButton: View {
 
     var title: String = "Button"
-    var foregroundColor: Color = Color(UIColor.systemBackground)
+    var foregroundColor: Color = Color(Colors.buttonLabelColor.rawValue)
     var backgroundColor: Color = Color(Colors.primaryColor.rawValue)
     var width: CGFloat = 350
     var action: () -> Void = {()}

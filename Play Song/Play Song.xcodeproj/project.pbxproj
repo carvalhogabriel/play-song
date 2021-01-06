@@ -172,9 +172,17 @@
 		0971C05C2577065C001E623A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				09DBB0D525A5FA1600F93DCC /* New Group */,
 				0971C02D25770631001E623A /* ContentView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		09DBB0D525A5FA1600F93DCC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

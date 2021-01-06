@@ -9,4 +9,5 @@ import Foundation
 
 enum Colors: String {
     case primaryColor
+    case buttonLabelColor
 }
