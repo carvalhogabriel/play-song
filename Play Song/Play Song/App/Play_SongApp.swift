@@ -12,7 +12,7 @@ import Firebase
 struct Play_SongApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandscapeView()
         }
     }
 

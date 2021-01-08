@@ -12,6 +12,7 @@
 		09509B3625894ED600BB15A5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3525894ED600BB15A5 /* FirebaseAuth */; };
 		09509B3825894ED600BB15A5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3725894ED600BB15A5 /* FirebaseFirestore */; };
 		09509B3A25894ED600BB15A5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3925894ED600BB15A5 /* FirebaseAnalytics */; };
+		09658DA225A7813300EAC0F8 /* RoundedFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */; };
 		0971C02C25770631001E623A /* Play_SongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02B25770631001E623A /* Play_SongApp.swift */; };
 		0971C02E25770631001E623A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02D25770631001E623A /* ContentView.swift */; };
 		0971C03025770633001E623A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971C02F25770633001E623A /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		0971C03E25770633001E623A /* Play_SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C03D25770633001E623A /* Play_SongTests.swift */; };
 		0971C04925770633001E623A /* Play_SongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C04825770633001E623A /* Play_SongUITests.swift */; };
 		0971C064257709CC001E623A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C063257709CC001E623A /* RoundedButton.swift */; };
+		09DBB0DA25A600CD00F93DCC /* LandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB0D925A600CD00F93DCC /* LandscapeView.swift */; };
+		09DBB0E225A6066D00F93DCC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB0E125A6066D00F93DCC /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 /* Begin PBXFileReference section */
 		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFlatButton.swift; sourceTree = "<group>"; };
 		0971C02825770631001E623A /* Play Song.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Song.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971C02B25770631001E623A /* Play_SongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongApp.swift; sourceTree = "<group>"; };
 		0971C02D25770631001E623A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		0971C04825770633001E623A /* Play_SongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongUITests.swift; sourceTree = "<group>"; };
 		0971C04A25770633001E623A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0971C063257709CC001E623A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		09DBB0D925A600CD00F93DCC /* LandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeView.swift; sourceTree = "<group>"; };
+		09DBB0E125A6066D00F93DCC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +169,9 @@
 		0971C05B25770659001E623A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0971C063257709CC001E623A /* RoundedButton.swift */,
+				09DBB0E825A7764800F93DCC /* Buttons */,
 				092EE2C22578444300A0AB36 /* Colors.swift */,
+				09DBB0E125A6066D00F93DCC /* Images.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -172,17 +179,27 @@
 		0971C05C2577065C001E623A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				09DBB0D525A5FA1600F93DCC /* New Group */,
+				09DBB0D525A5FA1600F93DCC /* Landscape */,
 				0971C02D25770631001E623A /* ContentView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		09DBB0D525A5FA1600F93DCC /* New Group */ = {
+		09DBB0D525A5FA1600F93DCC /* Landscape */ = {
 			isa = PBXGroup;
 			children = (
+				09DBB0D925A600CD00F93DCC /* LandscapeView.swift */,
 			);
-			path = "New Group";
+			path = Landscape;
+			sourceTree = "<group>";
+		};
+		09DBB0E825A7764800F93DCC /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0971C063257709CC001E623A /* RoundedButton.swift */,
+				09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DBB0DA25A600CD00F93DCC /* LandscapeView.swift in Sources */,
+				09DBB0E225A6066D00F93DCC /* Images.swift in Sources */,
 				0971C02E25770631001E623A /* ContentView.swift in Sources */,
 				092EE2C32578444300A0AB36 /* Colors.swift in Sources */,
 				0971C064257709CC001E623A /* RoundedButton.swift in Sources */,
 				0971C02C25770631001E623A /* Play_SongApp.swift in Sources */,
+				09658DA225A7813300EAC0F8 /* RoundedFlatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
