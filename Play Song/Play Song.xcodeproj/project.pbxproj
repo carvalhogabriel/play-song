@@ -13,6 +13,8 @@
 		09509B3825894ED600BB15A5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3725894ED600BB15A5 /* FirebaseFirestore */; };
 		09509B3A25894ED600BB15A5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3925894ED600BB15A5 /* FirebaseAnalytics */; };
 		09658DA225A7813300EAC0F8 /* RoundedFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */; };
+		09658DB625A8D7C100EAC0F8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09658DB525A8D7C100EAC0F8 /* LoginView.swift */; };
+		09658DBE25A8DF2A00EAC0F8 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09658DBD25A8DF2A00EAC0F8 /* LinkButton.swift */; };
 		0971C02C25770631001E623A /* Play_SongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02B25770631001E623A /* Play_SongApp.swift */; };
 		0971C02E25770631001E623A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971C02D25770631001E623A /* ContentView.swift */; };
 		0971C03025770633001E623A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971C02F25770633001E623A /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFlatButton.swift; sourceTree = "<group>"; };
+		09658DB525A8D7C100EAC0F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		09658DBD25A8DF2A00EAC0F8 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		0971C02825770631001E623A /* Play Song.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play Song.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971C02B25770631001E623A /* Play_SongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play_SongApp.swift; sourceTree = "<group>"; };
 		0971C02D25770631001E623A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09658DB425A8D7B300EAC0F8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				09658DB525A8D7C100EAC0F8 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		0971C01F25770631001E623A = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				09DBB0D525A5FA1600F93DCC /* Landscape */,
+				09658DB425A8D7B300EAC0F8 /* Login */,
 				0971C02D25770631001E623A /* ContentView.swift */,
 			);
 			path = Screens;
@@ -198,6 +211,7 @@
 			children = (
 				0971C063257709CC001E623A /* RoundedButton.swift */,
 				09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */,
+				09658DBD25A8DF2A00EAC0F8 /* LinkButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -346,6 +360,8 @@
 				092EE2C32578444300A0AB36 /* Colors.swift in Sources */,
 				0971C064257709CC001E623A /* RoundedButton.swift in Sources */,
 				0971C02C25770631001E623A /* Play_SongApp.swift in Sources */,
+				09658DBE25A8DF2A00EAC0F8 /* LinkButton.swift in Sources */,
+				09658DB625A8D7C100EAC0F8 /* LoginView.swift in Sources */,
 				09658DA225A7813300EAC0F8 /* RoundedFlatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

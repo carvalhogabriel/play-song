@@ -7,7 +7,15 @@
 
 import Foundation
 
-enum Images: String {
-    case lamp
-    case landscape
+struct Images {
+    struct LandscapeView {
+        static var lamp = "lamp"
+        static var landscape = "landscape"
+    }
+
+    struct LoginView {
+        static var login = "login"
+        static var google = "google"
+        static var facebook = "facebook"
+    }
 }

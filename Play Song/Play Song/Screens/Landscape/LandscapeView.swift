@@ -9,35 +9,51 @@ import SwiftUI
 
 struct LandscapeView: View {
 
-    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    @State private var showLogin = false
 
     var body: some View {
-        ZStack {
-            Color(Colors.primaryColor.rawValue)
-                .ignoresSafeArea()
-
-            VStack {
-                Image(Images.lamp.rawValue)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(minWidth: 0, idealWidth: 188, maxWidth: .some(188), minHeight: 0, idealHeight: 199, maxHeight: .some(199), alignment: .top)
+        NavigationView {
+            ZStack {
+                Color(Colors.primaryColor.rawValue)
                     .ignoresSafeArea()
-                Spacer()
 
-                Image(Images.landscape.rawValue)
-                    .resizable()
-                    .scaledToFit()
-                Spacer()
+                VStack {
+                    Image(Images.LandscapeView.lamp)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(minWidth: 0,
+                               idealWidth: 188,
+                               maxWidth: .some(188),
+                               minHeight: 0,
+                               idealHeight: 199,
+                               maxHeight: .some(199),
+                               alignment: .top)
+                        .ignoresSafeArea()
+                    Spacer()
 
-                VStack(alignment: .center, spacing: 32, content: {
-                    RoundedButton(title: "Login",
-                                  foregroundColor: Color(Colors.primaryColor.rawValue),
-                                  backgroundColor: Color.white)
-                    RoundedFlatButton(title: "Sign Up",buttonColor: Color(Colors.buttonLabelColor.rawValue))
-                })
-                Spacer().frame(maxWidth: .infinity, minHeight: 32, idealHeight: 32, maxHeight: .some(32), alignment: .center)
-            }
+                    Image(Images.LandscapeView.landscape)
+                        .resizable()
+                        .scaledToFit()
+                    Spacer()
+
+                    VStack(alignment: .center, spacing: 32, content: {
+                        NavigationLink(destination: LoginView(),
+                                       isActive: $showLogin) { EmptyView() }
+                        RoundedButton(title: "Login",
+                                      foregroundColor: Color(Colors.primaryColor.rawValue),
+                                      backgroundColor: Color.white) {
+                            self.showLogin = true
+                        }
+
+                        RoundedFlatButton(title: "Sign Up",buttonColor: Color(Colors.buttonLabelColor.rawValue))
+                    })
+                    Spacer().frame(maxWidth: .infinity,
+                                   minHeight: 32,
+                                   idealHeight: 32,
+                                   maxHeight: .some(32),
+                                   alignment: .center)
+                }
+            }.navigationBarHidden(true)
         }
     }
 }
