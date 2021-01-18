@@ -11,28 +11,39 @@ struct LoginView: View {
 
     @State private var email = ""
     @State private var password = ""
+    @State private var isEditing = false
+    @State private var showSignUp = false
 
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack(spacing: 32) {
+            if !isEditing {
                 Image(Images.LoginView.login)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 300, height: 230, alignment: .center)
-                    .padding(32)
+                    .padding([.top], 32)
+            }
 
+            ScrollView(.vertical, showsIndicators: true, content: {
                 VStack(spacing: 32) {
-                    TextField("E-mail", text: $email)
-                    TextField("Password", text: $password)
+
+                    TextField("Email", text: $email, onEditingChanged: { isEditing in
+                        self.isEditing = isEditing
+
+                    })
+                    .keyboardType(.emailAddress)
+                    .textContentType(.emailAddress)
+                    .disableAutocorrection(true)
+                    SecureField("Password", text: $password)
+                        .keyboardType(.default)
+                        .textContentType(.password)
+                        .disableAutocorrection(true)
                 }
-                .padding(.leading, 16)
-                .padding(.trailing, 16)
+                .padding([.leading, .trailing], 16)
 
                 RoundedButton(title: "Login")
-                    .padding(.top, 64)
-                    .padding(.bottom, 64)
+                    .padding([.top, .bottom], 64)
 
-                HStack(spacing: 32) {
+                HStack(alignment: .center, spacing: 32) {
                     Button(action: {
                         print("Facebook Button")
                     }, label: {
@@ -46,15 +57,19 @@ struct LoginView: View {
                     })
                 }
 
+                NavigationLink(destination: ContentView(),
+                               isActive: $showSignUp) { EmptyView() }
                 LinkButton {
-                    print("LinkButton Action")
-                }
-                Spacer()
-                    .frame(height: 32)
-            }
-
-        }.navigationBarTitle("Login")
-        .navigationBarBackButtonHidden(true)
+                    showSignUp = true
+                }.padding([.top, .bottom], 32)
+            })
+            .padding(.bottom)
+            .navigationTitle("Login")
+            .navigationBarBackButtonHidden(true)
+        }
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 

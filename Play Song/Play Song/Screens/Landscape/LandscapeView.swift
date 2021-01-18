@@ -22,12 +22,9 @@ struct LandscapeView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(minWidth: 0,
-                               idealWidth: 188,
                                maxWidth: .some(188),
                                minHeight: 0,
-                               idealHeight: 199,
-                               maxHeight: .some(199),
-                               alignment: .top)
+                               maxHeight: .some(199))
                         .ignoresSafeArea()
                     Spacer()
 
@@ -42,7 +39,7 @@ struct LandscapeView: View {
                         RoundedButton(title: "Login",
                                       foregroundColor: Color(Colors.primaryColor.rawValue),
                                       backgroundColor: Color.white) {
-                            self.showLogin = true
+                            showLogin = true
                         }
 
                         RoundedFlatButton(title: "Sign Up",buttonColor: Color(Colors.buttonLabelColor.rawValue))
