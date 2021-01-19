@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091F499825B61DC600CD5FE8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F499725B61DC600CD5FE8 /* SignUpView.swift */; };
 		092EE2C32578444300A0AB36 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EE2C22578444300A0AB36 /* Colors.swift */; };
 		09509B3025892D6F00BB15A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */; };
 		09509B3625894ED600BB15A5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3525894ED600BB15A5 /* FirebaseAuth */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091F499725B61DC600CD5FE8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFlatButton.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091F499625B61DB600CD5FE8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				091F499725B61DC600CD5FE8 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		09658DB425A8D7B300EAC0F8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +222,7 @@
 			children = (
 				09DBB0D525A5FA1600F93DCC /* Landscape */,
 				09658DB425A8D7B300EAC0F8 /* Login */,
+				091F499625B61DB600CD5FE8 /* SignUp */,
 				0971C02D25770631001E623A /* ContentView.swift */,
 			);
 			path = Screens;
@@ -378,6 +389,7 @@
 				0971C02E25770631001E623A /* ContentView.swift in Sources */,
 				092EE2C32578444300A0AB36 /* Colors.swift in Sources */,
 				0971C064257709CC001E623A /* RoundedButton.swift in Sources */,
+				091F499825B61DC600CD5FE8 /* SignUpView.swift in Sources */,
 				0971C02C25770631001E623A /* Play_SongApp.swift in Sources */,
 				09658DBE25A8DF2A00EAC0F8 /* LinkButton.swift in Sources */,
 				09658DB625A8D7C100EAC0F8 /* LoginView.swift in Sources */,

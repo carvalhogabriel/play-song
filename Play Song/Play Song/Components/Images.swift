@@ -18,4 +18,8 @@ struct Images {
         static var google = "google"
         static var facebook = "facebook"
     }
+
+    struct SignUpView {
+        static var signup = "signup"
+    }
 }

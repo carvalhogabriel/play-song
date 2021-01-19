@@ -10,6 +10,7 @@ import SwiftUI
 struct LandscapeView: View {
 
     @State private var showLogin = false
+    @State private var showSignUp = false
 
     var body: some View {
         NavigationView {
@@ -42,7 +43,12 @@ struct LandscapeView: View {
                             showLogin = true
                         }
 
-                        RoundedFlatButton(title: "Sign Up",buttonColor: Color(Colors.buttonLabelColor.rawValue))
+                        NavigationLink(destination: SignUpView(),
+                                       isActive: $showSignUp) { EmptyView() }
+                            .navigationBarTitle("")
+                        RoundedFlatButton(title: "Sign Up",buttonColor: Color(Colors.buttonLabelColor.rawValue)) {
+                            showSignUp = true
+                        }
                     })
                     Spacer().frame(maxWidth: .infinity,
                                    minHeight: 32,
@@ -51,7 +57,7 @@ struct LandscapeView: View {
                                    alignment: .center)
                 }
             }.navigationBarHidden(true)
-        }
+        }.accentColor(Color(Colors.primaryColor.rawValue))
     }
 }
 
