@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-import Firebase
+
 
 struct SignUpView: View {
 
-    @State private var name = ""
-    @State private var email = ""
-    @State private var password = ""
+    @ObservedObject private var signUpViewModel = SignUpViewModel()
 
     var body: some View {
         GeometryReader { fullView in
@@ -24,23 +22,23 @@ struct SignUpView: View {
                     .padding([.top, .bottom], 32)
 
                 VStack(spacing: 32) {
-                    TextField("Name", text: $name)
+                    TextField("Name", text: $signUpViewModel.name)
                         .textContentType(.name)
                         .disableAutocorrection(true)
 
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $signUpViewModel.email)
                         .keyboardType(.emailAddress)
                         .textContentType(.emailAddress)
                         .disableAutocorrection(true)
 
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $signUpViewModel.password)
                         .textContentType(.password)
                         .disableAutocorrection(true)
                 }
                 .padding([.leading, .trailing], 16)
 
                 RoundedButton(title: "Sign Up") {
-                    print("Signup tapped")
+                    signUpViewModel.signUp()
                 }.padding([.top,.bottom], 32)
             }
         }

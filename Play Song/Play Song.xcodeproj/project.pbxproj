@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		091F499825B61DC600CD5FE8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F499725B61DC600CD5FE8 /* SignUpView.swift */; };
 		092EE2C32578444300A0AB36 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EE2C22578444300A0AB36 /* Colors.swift */; };
+		0946293325B8A0DE0020C8CD /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946293225B8A0DE0020C8CD /* SignUpModel.swift */; };
+		0946293925B8A2AE0020C8CD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946293825B8A2AE0020C8CD /* SignUpViewModel.swift */; };
 		09509B3025892D6F00BB15A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */; };
 		09509B3625894ED600BB15A5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3525894ED600BB15A5 /* FirebaseAuth */; };
 		09509B3825894ED600BB15A5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09509B3725894ED600BB15A5 /* FirebaseFirestore */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		091F499725B61DC600CD5FE8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		092EE2C22578444300A0AB36 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0946293225B8A0DE0020C8CD /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		0946293825B8A2AE0020C8CD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		09509B2F25892D6F00BB15A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09658DA125A7813300EAC0F8 /* RoundedFlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedFlatButton.swift; sourceTree = "<group>"; };
 		09658DB525A8D7C100EAC0F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		0946293725B8A2A00020C8CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0946293825B8A2AE0020C8CD /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		09658DB425A8D7B300EAC0F8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +168,7 @@
 				0971C05925770652001E623A /* App */,
 				0971C05C2577065C001E623A /* Screens */,
 				0971C05B25770659001E623A /* Components */,
+				0946293725B8A2A00020C8CD /* ViewModel */,
 				0971C05A25770656001E623A /* Models */,
 				096C01B725B21ECE006BB157 /* Utils */,
 				0971C02F25770633001E623A /* Assets.xcassets */,
@@ -203,6 +216,7 @@
 		0971C05A25770656001E623A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0946293225B8A0DE0020C8CD /* SignUpModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,8 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DBB0DA25A600CD00F93DCC /* LandscapeView.swift in Sources */,
+				0946293925B8A2AE0020C8CD /* SignUpViewModel.swift in Sources */,
 				09DBB0E225A6066D00F93DCC /* Images.swift in Sources */,
 				0971C02E25770631001E623A /* ContentView.swift in Sources */,
+				0946293325B8A0DE0020C8CD /* SignUpModel.swift in Sources */,
 				092EE2C32578444300A0AB36 /* Colors.swift in Sources */,
 				0971C064257709CC001E623A /* RoundedButton.swift in Sources */,
 				091F499825B61DC600CD5FE8 /* SignUpView.swift in Sources */,
