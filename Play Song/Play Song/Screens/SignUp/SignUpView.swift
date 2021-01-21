@@ -12,6 +12,10 @@ struct SignUpView: View {
 
     @ObservedObject private var signUpViewModel = SignUpViewModel()
 
+    private var signUpButtonColor: Color {
+        signUpViewModel.isAllFieldsValid ? Color(Colors.primaryColor.rawValue) : Color.gray
+    }
+    
     var body: some View {
         GeometryReader { fullView in
             VStack(spacing: 32) {
@@ -21,25 +25,32 @@ struct SignUpView: View {
                     .frame(minWidth: 0, minHeight: 0, maxHeight: .some(fullView.size.height / 3))
                     .padding([.top, .bottom], 32)
 
-                VStack(spacing: 32) {
-                    TextField("Name", text: $signUpViewModel.name)
-                        .textContentType(.name)
-                        .disableAutocorrection(true)
+                VStack(spacing: 16) {
+                    EntryField(placeholder: "Name",
+                               field: $signUpViewModel.name,
+                               isSecure: false,
+                               errorText: signUpViewModel.nameErrorString,
+                               textContentType: .name)
 
-                    TextField("Email", text: $signUpViewModel.email)
-                        .keyboardType(.emailAddress)
-                        .textContentType(.emailAddress)
-                        .disableAutocorrection(true)
+                    EntryField(placeholder: "Email",
+                               field: $signUpViewModel.email,
+                               isSecure: false,
+                               errorText: signUpViewModel.emailErrorString,
+                               textContentType: .emailAddress,
+                               keyboardType: .emailAddress)
 
-                    SecureField("Password", text: $signUpViewModel.password)
-                        .textContentType(.password)
-                        .disableAutocorrection(true)
+                    EntryField(placeholder: "Password",
+                               field: $signUpViewModel.password,
+                               isSecure: true,
+                               errorText: signUpViewModel.passwordErrorString,
+                               textContentType: .password)
                 }
-                .padding([.leading, .trailing], 16)
 
-                RoundedButton(title: "Sign Up") {
+                RoundedButton(title: signUpViewModel.isLoading ? "Loading..." : "Sign Up",
+                              backgroundColor: signUpButtonColor) {
                     signUpViewModel.signUp()
                 }.padding([.top,.bottom], 32)
+                .disabled(!signUpViewModel.isAllFieldsValid || signUpViewModel.isLoading)
             }
         }
         .onTapGesture {
