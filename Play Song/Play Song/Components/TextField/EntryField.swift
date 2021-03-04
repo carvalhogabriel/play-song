@@ -32,6 +32,7 @@ struct EntryField: View {
                     .keyboardType(keyboardType ?? .default)
             }
             Text(errorText)
+                .foregroundColor(Color(UIColor.systemRed))
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.caption)
         }

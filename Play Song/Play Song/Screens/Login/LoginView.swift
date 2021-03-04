@@ -9,10 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @State private var email = ""
-    @State private var password = ""
-    @State private var isEditing = false
-    @State private var showSignUp = false
+    @ObservedObject private var loginViewModel = LoginViewModel()
 
     var body: some View {
         GeometryReader { fullView in
@@ -24,40 +21,47 @@ struct LoginView: View {
                     .padding([.top], 32)
 
                 ScrollView(.vertical, showsIndicators: true, content: {
-                    VStack(spacing: 32) {
+                    VStack(spacing: 16) {
+                        EntryField(placeholder: "Email",
+                                   field: $loginViewModel.email,
+                                   isSecure: false,
+                                   errorText: loginViewModel.emailErrorString,
+                                   textContentType: .emailAddress)
 
-                        TextField("Email", text: $email)
-                            .keyboardType(.emailAddress)
-                            .textContentType(.emailAddress)
-                            .disableAutocorrection(true)
-                        SecureField("Password", text: $password)
-                            .textContentType(.password)
-                            .disableAutocorrection(true)
+                        EntryField(placeholder: "Password",
+                                   field: $loginViewModel.password,
+                                   isSecure: false,
+                                   errorText: loginViewModel.passwordErrorString,
+                                   textContentType: .password)
                     }
-                    .padding([.leading, .trailing], 16)
 
                     RoundedButton(title: "Login")
                         .padding([.top, .bottom], 64)
 
                     HStack(alignment: .center, spacing: 32) {
-                        Button(action: {
-                            print("Facebook Button")
-                        }, label: {
-                            Image(Images.LoginView.facebook)
-                        })
+                        NavigationLink(destination: ContentView(),
+                                       isActive: $loginViewModel.showHome) { EmptyView() }
+                        FacebookButton {
+                            loginViewModel.showHome = true
+                        }
+//                        Button(action: {
+//                            print("Facebook Button")
+//                        }, label: {
+//                            Image(Images.LoginView.facebook)
+//                        })
 
                         Button(action: {
-                            print("Facebook Button")
+                            print("Google Button")
                         }, label: {
                             Image(Images.LoginView.google)
                         })
                     }
 
                     NavigationLink(destination: SignUpView(),
-                                   isActive: $showSignUp) { EmptyView() }
+                                   isActive: $loginViewModel.showSignUp) { EmptyView() }
                         .navigationBarTitle("")
                     LinkButton {
-                        showSignUp = true
+                        loginViewModel.showSignUpScreen()
                     }.padding([.top, .bottom], 32)
                 })
                 .padding(.bottom)

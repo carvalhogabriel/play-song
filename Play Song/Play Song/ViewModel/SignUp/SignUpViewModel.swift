@@ -18,6 +18,8 @@ class SignUpViewModel: ObservableObject {
 
     @Published var isLoading = false
 
+    // MARK: - Validator(s)
+    
     var isAllFieldsValid: Bool {
         if !name.isNameValid() ||
             !email.isEmailValid() ||

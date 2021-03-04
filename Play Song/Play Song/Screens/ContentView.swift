@@ -25,6 +25,7 @@ struct ContentView: View {
                     print(error ?? "")
                 }
             }
+            FacebookButton()
             RoundedButton(title: "Adicionar Dados") {
                 var ref: DocumentReference? = nil
                 let db = Firestore.firestore()
